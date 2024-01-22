@@ -1,0 +1,9 @@
+{% extends 'bookshop/base.html' %}
+{% block title %}Author Detail{% endblock %}
+{% block body %}
+    <h1>Authore Detail Page</h1>
+    <h3>{{ author.name }}</h3>
+    {% for author in author.objects.all %}
+        {{ author.age }} {{ author.address }}  <br>
+    {% endfor %}
+{% endblock %}

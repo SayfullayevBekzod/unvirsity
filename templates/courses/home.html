@@ -1,0 +1,17 @@
+{% extends 'courses/base.html' %}
+{% block title %} Home Page {% endblock %}
+{% block body %}
+    <h1>Teachers</h1> <a href=""> Create New Teacher</a>
+    {% for teacher in teachers %}
+        <a href="{% url 'courses:teacher-detail' teacher.id %}">{{ teacher.first_name }}</a> <br>
+    {% endfor %}
+    <h1>Specialities</h1><br><a type="button" href="{% url 'courses:speciality-create' %}" ><button>create new speciality</button></a><br> <br>
+    {% for speciality in specialities %}
+        <a href="{% url 'courses:speciality-detail' speciality.id %}">{{ speciality.name }}</a> <br>
+    {% endfor %}
+    <h1>Subjects</h1>
+    {% for subject in subjects %}
+        <a href="">{{ subject.name }}</a> <br>
+    {% endfor %}
+
+{% endblock %}

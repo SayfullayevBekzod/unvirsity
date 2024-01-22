@@ -1,0 +1,9 @@
+{% extends "bookshop/base.html" %}
+{% block title %}Author List{% endblock %}
+{% block body %}
+    <h1>Author List Page</h1>
+    <a href="{% url 'bookshop:author-create' %}"><button>Create Author</button></a> <br>
+    {% for authore in authores %}
+        <a href="{% url 'bookshop:author-detail' store.id %}"> {{ author.age }} </a><br>
+    {% endfor %}
+{% endblock %}

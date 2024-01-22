@@ -1,0 +1,9 @@
+{% extends 'bookshop/base.html' %}
+{% block title %} Bookshop Home Page {% endblock %}
+{% block body %}
+    <h1>Book Shop Page</h1>
+    <a href="{% url 'bookshop:publisher-page' %}">publishers</a><br><br>
+    <a href="{% url 'bookshop:store-list' %}">stores</a><br><br>
+    <a href="{% url 'bookshop:author-list' %}">authors</a><br><br>
+    <a href="">books</a><br><br>
+{% endblock %}
