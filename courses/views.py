@@ -1,4 +1,5 @@
 from django.shortcuts import render, redirect
+from django.views import View
 
 from courses.forms import SpecialityForm
 from courses.models import Subject, Speciality, Teacher
